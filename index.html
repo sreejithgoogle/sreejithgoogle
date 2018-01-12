@@ -7,7 +7,14 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 	</head>
 	<body ng-app="ngCribs" ng-controller="cribsController">
-		<h1>{{ 5+7 }}</h1>
+		<div class="well" ng-repeat="crib in cribs">
+		
+			<h3>{{ crib.address }}</h3>
+			<p><strong>Type: </strong>{{ crib.type }}</p>
+			<p><strong>Description: </strong>{{ crib.description }}</p>
+			<p><strong>Price: </strong>{{ crib.price | currency }}</p>
+		
+		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
